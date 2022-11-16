@@ -1,5 +1,6 @@
 package tn.test.spring.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -10,8 +11,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-
-
+@ToString
 @NoArgsConstructor
 @Entity
 public class Facture {
@@ -40,6 +40,7 @@ public class Facture {
     private Set<Facture> factures;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
     private Fournisseur fournisseur;
 
 

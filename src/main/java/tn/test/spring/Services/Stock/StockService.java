@@ -11,4 +11,6 @@ public interface StockService {
     Stock getStock(Integer id);
 
     List<Stock> retrieveAllStocks();
+
+    String retrieveStatusStock() ;
 }

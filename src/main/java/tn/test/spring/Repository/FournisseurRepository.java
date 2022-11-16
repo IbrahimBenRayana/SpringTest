@@ -4,5 +4,7 @@ import tn.test.spring.Entity.Fournisseur;
 
 public interface FournisseurRepository extends GRepository<Fournisseur> {
 
+    Fournisseur findByIdFournisseur(int id) ;
+
 }
 

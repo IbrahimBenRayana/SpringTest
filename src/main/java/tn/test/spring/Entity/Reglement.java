@@ -20,9 +20,9 @@ public class Reglement {
     private int idReglement;
 
 
-    private String montantPaye ;
+    private float montantPaye ;
 
-   private String  montantRestant ;
+   private float  montantRestant ;
 
    private Boolean payee ;
 

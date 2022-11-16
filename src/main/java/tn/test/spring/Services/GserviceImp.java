@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.yaml.snakeyaml.events.Event;
 import tn.test.spring.Repository.GRepository;
 
+import java.util.List;
+
 public class GserviceImp<T,ID> implements Gservice<T> {
 
 
@@ -26,6 +28,12 @@ public class GserviceImp<T,ID> implements Gservice<T> {
     @Override
     public void update(T t) {
         gRepository.save(t);
+    }
+
+    @Override
+    public List<T> retrieveAll() {
+        return  gRepository.findAll();
+
     }
 
 
